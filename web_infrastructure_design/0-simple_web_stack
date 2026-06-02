@@ -47,4 +47,4 @@ Scalability Limitations: a single server cannot handle high traffic; performance
 
 This single-server infrastructure is simple and low-cost, suitable for small sites, but it is not fault-tolerant and cannot scale easily. For larger traffic or high availability, multiple servers or distributed architectures are required.
 
-![alt text](image.png)
+![alt text](simple_web.png)

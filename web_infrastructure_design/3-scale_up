@@ -1,0 +1,46 @@
+# Application Server vs Web Server Infrastructure
+
+This infrastructure improves availability and scalability by adding a second load balancer and separating each component onto its own server.
+
+## Additional Elements
+
+### Second Load Balancer (HAProxy)
+
+A second HAProxy is added to create a load balancer cluster. This removes the load balancer as a single point of failure. If one HAProxy fails, the other can continue serving traffic.
+
+### Dedicated Web Server
+
+The web server is placed on its own server. Its role is to receive HTTP/HTTPS requests, serve static files, and forward dynamic requests to the application server.
+
+### Dedicated Application Server
+
+The application server is separated from the web server. It executes the application code, processes business logic, and generates dynamic content.
+
+### Dedicated Database Server
+
+The database is placed on a separate server. This improves performance, security, and allows the database to scale independently from the application.
+
+## Web Server vs Application Server
+
+**Web Server (Nginx):**
+
+* Handles HTTP/HTTPS requests.
+* Serves static content.
+* Acts as a reverse proxy.
+
+**Application Server:**
+
+* Executes application code.
+* Processes business logic.
+* Communicates with the database.
+
+## Benefits
+
+* Improved high availability with a load balancer cluster.
+* Better performance through component separation.
+* Easier maintenance and troubleshooting.
+* Independent scaling of web, application, and database servers.
+* Reduced risk of one component affecting the others.
+
+
+![alt text](load_balancer_cluster.png)

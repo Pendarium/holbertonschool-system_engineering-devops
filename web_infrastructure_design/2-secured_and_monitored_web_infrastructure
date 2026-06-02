@@ -1,0 +1,45 @@
+# Secured and Monitored Web Infrastructure
+
+This infrastructure consists of a load balancer (HAProxy), two web servers, firewalls, SSL encryption, and monitoring clients.
+
+## Additional Elements
+
+* **3 Firewalls:** Protect servers by filtering incoming and outgoing traffic and blocking unauthorized access.
+* **SSL Certificate:** Enables HTTPS to encrypt data exchanged between users and the website.
+* **3 Monitoring Clients:** Collect performance and health data from servers and send it to a monitoring platform such as Sumo Logic.
+
+## HTTPS
+
+HTTPS encrypts communication between the user's browser and the website. This protects sensitive information such as passwords, cookies, and personal data from interception.
+
+## Monitoring
+
+Monitoring is used to:
+
+* Detect failures.
+* Track server performance.
+* Monitor resource usage (CPU, RAM, Disk).
+* Receive alerts when services become unavailable.
+
+Monitoring clients collect metrics and logs from each server and send them to a centralized monitoring system for analysis.
+
+## Monitoring Web Server QPS
+
+To monitor QPS (Queries Per Second), configure the monitoring tool to collect request metrics from Nginx and create dashboards or alerts based on the number of requests processed per second.
+
+## Infrastructure Issues
+
+### SSL Termination at Load Balancer
+
+If SSL is terminated at HAProxy, traffic between HAProxy and backend servers may be unencrypted, creating a potential security risk.
+
+### Single Writable MySQL Server
+
+Only the Primary MySQL server can accept write operations. If it fails, the application can no longer create, update, or delete data.
+
+### Same Components on Every Server
+
+Having the web server, application server, and database on the same machine increases resource competition and makes scaling individual components more difficult. A problem affecting one component may also impact the others.
+
+
+![alt text](3_firewall.png)
