@@ -43,4 +43,4 @@ The database is placed on a separate server. This improves performance, security
 * Reduced risk of one component affecting the others.
 
 
-![alt text](load_balancer_cluster.png)
+![alt text](load_balancer_clusters.png)
