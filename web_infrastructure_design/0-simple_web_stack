@@ -47,4 +47,4 @@ Step 5: Summary
 
 This single-server infrastructure is simple and low-cost, suitable for small sites, but it is not fault-tolerant and cannot scale easily. For larger traffic or high availability, multiple servers or distributed architectures are required.
 
-https://mermaid.live/edit#pako:eNplUGFvmzAQ_SvW5SuhJCYBXKlSEzRtUjatTadJhX5w4EhQwWa2GWmT_Pc50EytastPd-_uvSf5AJnMERgUleyyHVeGrO5TQez5pVElZ3gi4_HN8evDw8-rM6yJwj8tanMk34RBJdAkl-JpkF7aXth1nVtIueHKzWRNxjckdPt7JD-2pdgnPZLfuCFrVH9t3mAy0NaB3DZNYl9VZtyUUnxcs4N-KV4k31_WdysSc8M3XOMnmy9lhfqDUc-QK7K0f_AmGURZxbWOsSC6jyJFWVVsVESFo42Sz8hGlNK3etyVudmxSbO_ficech2b5sQLZwgazOwWOLBVZQ7MqBYdqFHV_NzC4eyQgtlhjSkwW-ZY8LYyKaTiZGUNF49S1helku12B6zglbZd2-TcYFzyreL1f1ahyFEtZSsMMDqjvQmwA-yBTX13Op-FgR9NfOpR6tvpC7CJH7i-589o5M_DIAii2cmB1z7Xc8OQWir0ptNo7nnR_PQPjMy5VQ
+![alt text](image.png)
