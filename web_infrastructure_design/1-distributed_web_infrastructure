@@ -1,0 +1,32 @@
+# Three-Server Web Infrastructure Summary
+
+This infrastructure uses a load balancer (HAProxy) and two servers to improve availability and scalability.
+
+HAProxy distributes incoming requests between the two servers using the Round Robin algorithm. Each request is sent alternately to Server 1 and Server 2, ensuring an even distribution of traffic.
+
+The infrastructure operates in an Active-Active configuration, meaning both servers handle requests simultaneously. Unlike an Active-Passive setup, where one server remains on standby, Active-Active improves performance and resource utilization.
+
+## Each server contains:
+
+- An Nginx web server
+- An application server
+- Application files
+- A MySQL database
+
+The databases are configured in a Primary-Replica cluster. The Primary database handles all write operations (INSERT, UPDATE, DELETE), while the Replica receives replicated data from the Primary and is mainly used for read operations.
+
+Despite these improvements, some issues remain:
+
+- ### SPOF (Single Point of Failure):
+- HAProxy is a single point of failure.
+- The Primary database is also a single point of failure for write operations.
+- ### Security Issues:
+- No firewall protects the servers.
+- No HTTPS encryption is used, exposing data to interception.
+- ### No Monitoring:
+- Failures and performance problems may go undetected.
+- No alerts are available if a service becomes unavailable.
+
+This architecture is more reliable and scalable than a single-server setup but still requires additional security, redundancy, and monitoring improvements.
+
+![alt text](image-1.png)

@@ -1,15 +1,15 @@
-Simple Web Stack Explanation
+# Simple Web Stack Explanation
 
 Many websites run on a simple infrastructure using a single server. Here, we design a server hosting a website accessible via www.foobar.com
 
-Step 1: User Request
+## Step 1: User Request
 
 When a user visits www.foobar.com
 their browser sends an HTTP/HTTPS request. The DNS resolves the domain to the server IP 8.8.8.8, pointing to our server.
 
-Step 2: Server Components
+## Step 2: Server Components
 
-The server contains:
+### The server contains:
 
 Web Server (Nginx) – receives requests, serves static files, forwards dynamic requests to the application server.
 
@@ -19,7 +19,7 @@ Application Files / Codebase – contains the code and assets used by the applic
 
 Database (MySQL) – stores data like users, posts, and comments for the application.
 
-Step 3: Roles Explained
+## Step 3: Roles Explained
 
 Server: provides services to clients over a network.
 
@@ -35,7 +35,7 @@ Database: stores structured application data.
 
 Communication: uses HTTP/HTTPS between the server and the user’s browser.
 
-Step 4: Issues
+## Step 4: Issues
 
 SPOF (Single Point of Failure): if the server fails, the site is offline.
 
@@ -43,7 +43,7 @@ Downtime During Maintenance: restarting the server or deploying new code causes 
 
 Scalability Limitations: a single server cannot handle high traffic; performance may degrade.
 
-Step 5: Summary
+## Step 5: Summary
 
 This single-server infrastructure is simple and low-cost, suitable for small sites, but it is not fault-tolerant and cannot scale easily. For larger traffic or high availability, multiple servers or distributed architectures are required.
 
